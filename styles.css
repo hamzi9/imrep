@@ -1,0 +1,132 @@
+
+*{                  /*this is universal selector*/
+  margin: 0;          /*brings navigation bar right to the edge*/
+  padding: 0;       /*it's a common reset*/
+}
+nav {
+  margin: 50px ;
+  
+  }
+  ul {
+    overflow: auto;
+    list-style-type: none;         /*removes fullstop which are on the edge*/
+    }
+    li {
+      height: 25px;                 /*height tells how far it needs to be from top*/
+      float: left;                   /*left tells that it will be all the way towards left*/
+      margin-right: 0px;              /*right margin is zero*/
+      border-right: 1px solid #aaa ;
+      padding: 0 20px;                    /*it gives space between the lines in navigation bar*/
+      
+      }
+      li:last-child{
+        border-right:none;               /*this is to decorate last li element*/
+        /*border-right:none.... this has removed the line created on the right side of the last li element*/ 
+      }
+      li a {                     /*this is to decorate list elements with anchor*/     
+        text-decoration: none;
+        color: whitesmoke;
+        font: 25px/1 Helvetica, Vardana, sans-serif;
+        text-transform: uppercase;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        
+        }
+        li a:hover {                   /*styles the li and anchor with a hover*/
+          color: #666;                            /*its a selector*/
+          }
+
+          li.active a {                    /*styles the li which has active class and also has an anchor tag*/
+            
+          font-weight: bold;
+          color: #333;
+          }
+         
+
+body{
+  background-color:gray;
+  
+}
+#footer {
+  text-align: left;                                /*here we style the footer*/
+  height: 140px;
+  width: 100%;
+  font-size:40px;
+  
+  background-color:  white;
+   }
+  
+  #header {                                   /*here we style the header*/
+    height: 85px;
+    width: 100%;
+    font-size:60px;
+    text-align: center;
+    background-color:  white;
+     }
+h1{
+  text-align: center;
+  font-size:60px;
+}
+.title {                                            
+ display: flex;
+ margin: 10px 0; 
+ padding: 0 10px;
+
+}
+.column {                               /*here we style the column*/
+display: flex;
+padding: 10px;
+width: 33.33333%;
+text-align: left;
+
+border-right: 10px solid #fff;
+display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+  
+  .column-wrap /*Div Element*/
+  {
+  background: grey;
+  padding: 5px;
+  border-radius: 4px;
+  display: flex; /*sets the display type of the div element to flex*/
+  flex-direction: row; /*moves columns into a row*/
+  justify-content: space-around; /*Spaces the columns*/
+  }
+  
+  .column-wrap article /*Articles within div element*/
+  {
+  background: white;
+  padding: 5px;
+  border-radius: 10px;
+  width: 33.33333% /*Sets the width of the articles. Adjust as required*/
+  }
+  
+  .column-wrap article h2 /*H2 tags within the ariticle*/
+  {
+  text-align: center;
+  }
+  
+  @media (max-width: 40em) /*Page media query*/
+  {
+  .column-wrap
+  {
+   flex-direction: column; /*Moves columns under one another*/
+  }
+  
+  .column-wrap article
+  {
+   width: 90%; /*Increases width of coloumns*/
+   margin: 0 auto 5px auto; /*Centers Columns and adds margin to the bottom*/
+  }
+ 
+  
+ 
+  
+
+}
